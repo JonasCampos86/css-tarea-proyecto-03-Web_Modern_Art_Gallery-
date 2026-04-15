@@ -1,0 +1,64 @@
+@use 'variables' as v;
+
+// ============================
+// MIXIN BREAKPOINTS
+// Uso: @include m.breakpoint(tablet) { ... }
+// ============================
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (min-width: v.$bp-mobile)     { @content; }
+  } @else if $breakpoint == tablet {
+    @media (min-width: v.$bp-tablet)     { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: v.$bp-desktop)    { @content; }
+  } @else if $breakpoint == desktop-xl {
+    @media (min-width: v.$bp-desktop-xl) { @content; }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' no definido. Usa: mobile, tablet, desktop, desktop-xl";
+  }
+}
+
+
+// ============================
+// MIXIN BOTONS
+// Uso: @include m.btn
+// ============================
+
+@mixin btn1($bg:v.$black,$bgh:v.$brown,$c:white){
+  display: inline-block;
+  padding: 24px 35px 24px 32px;
+  background-color: $bg;
+  color:$c;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $bgh;
+    color: white;
+  }
+}
+
+@mixin btn2($bg:v.$brown,$bgh:v.$black,$c:white){
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background-color: $bg;
+  color:$c;
+  text-decoration: none;
+  
+  
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $bgh;
+    color: white;
+  }
+}
+
+
+// Reseteo de listas
+
+@mixin reset-list(){
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,72 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins'    as m;
+
+
+.hero-principal{
+    .hero__media{
+        img{
+            width: 100%;
+            display: block;
+        }
+        
+    }
+}
+
+
+.container{
+    .title__principal{
+        font-family: v.$font-principal;
+        font-size: v.$headM;
+        font-weight: 900;
+        line-height: 55px;
+        width: 84%;
+        padding-top:32px ;
+    }
+    .subtitle__principal{
+        font-family: v.$font-secondary;
+        font-size: v.$bodyS;
+        color: v.$grey;
+        font-weight: 300;
+        line-height: 28px;
+        width: 100%;
+        padding-top:32px
+
+    }
+    .hero__buttons{
+        display: flex;
+        flex-direction: row;
+        margin-top: 32px;
+        
+        .button{
+            @include m.btn1;
+            display: flex;
+            font-family: v.$font-principal;
+            line-height: 100%;
+            font-weight: 800;
+            letter-spacing: 3.64px;
+            height: 72px;
+            align-items: center;
+            
+            
+   
+        }
+        .row{
+            display: flex;
+            background-color: v.$brown;
+            width: 56px;
+            height: 72px;
+            align-items: center;
+            justify-content: center;
+            :hover{
+                background-color: v.$black;
+            }
+            
+            img{
+                width: 8px;
+                height: 24px;
+
+
+            }
+        }
+    }
+}
