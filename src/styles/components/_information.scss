@@ -1,2 +1,67 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins'    as m;
+
+.information{
+    padding-top: 120px;
+
+    .info__media-1{
+        width: 100%;
+    }
+    .info__title-1{
+        padding-top: 25px;
+        font-family: v.$font-principal;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 45px;
+        letter-spacing: 0px;
+        color: v.$black;
+        width:100%;
+        
+    }
+    .info__subtitle-1{
+        padding-top: 21px;
+        font-family: v.$font-secondary;
+        font-weight: 400;
+        font-size: v.$bodyS;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: v.$grey;
+        width:100%;
+    }
+    .info__media-2{
+        padding-top: 32px;
+    }
+    .info__media-3{
+        padding-top: 16px;
+    }
+    .info__secondary{
+        background-color: v.$black;
+        padding-top: 16px;
+        .info__title-2{
+            padding-top: 48px;
+            padding-left: 24px;
+            padding-right: 24px;
+            font-family: v.$font-principal;
+            font-weight: 900;
+            font-size: 50px;
+            line-height: 45px;
+            letter-spacing: 0px;
+            color: v.$white;
+
+
+
+        }
+        .info__subtitle-2{
+            padding: 24px 24px 47px 24px ;
+
+            color: v.$white;
+            font-family: v.$font-secondary;
+            font-weight: 400;
+            font-size: v.$bodyS;
+            line-height: 28px;
+            letter-spacing: 0px;
+        }
+
+    }
+    
+}

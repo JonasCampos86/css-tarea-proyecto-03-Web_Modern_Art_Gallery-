@@ -1,2 +1,56 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins'    as m;
+
+
+
+.header-principal-lc{
+    .container{
+        padding-left: 0px;
+    }
+    height: 550px ;
+    background-image: url("/public/Maps.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .header__buttons-lc{
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+
+
+        .row-lc{
+            display: flex;
+            background-color: v.$brown;
+            width: 56px;
+            height: 72px;
+            align-items: center;
+            justify-content: center;
+            
+            
+            img{
+                width: 8px;
+                height: 24px;
+
+
+            }
+        }
+        :hover{
+                background-color: v.$black;
+        }
+        .button{
+            @include m.btn1;
+            display: flex;
+            font-family: v.$font-principal;
+            line-height: 100%;
+            font-weight: 800;
+            letter-spacing: 3.64px;
+            height: 72px;
+            align-items: center;
+            
+            
+   
+        }
+
+    }
+
+
+}

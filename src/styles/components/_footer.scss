@@ -1,2 +1,81 @@
-@use '../abstracts/variables' as v;
-@use '../abstracts/mixins'    as m;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+footer {
+  background-color: v.$black;
+  margin-top: 120px;
+
+  .ft__info {
+    padding-left: 32px;
+    padding-right: 32px;
+
+    h3 {
+      padding-top: 48px;
+      color: v.$white;
+      font-family: v.$font-principal;
+      font-size: v.$bodyM;
+    }
+    p {
+      padding-top: 58px;
+      width: 90%;
+      color: v.$white;
+      font-family: v.$font-secondary;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0px;
+    }
+    .ft__nav {
+      ul {
+        @include m.reset-list();
+        display: flex;
+        gap: 20px;
+        li {
+          padding-top: 38px;
+          padding-bottom: 48px;
+        }
+      }
+    }
+  }
+}
+.ft-lc {
+  margin-top: 0px;
+  background-color: v.$brown;
+
+  .ft__info-lc {
+    padding-left: 32px;
+    padding-right: 32px;
+
+    h3 {
+      padding-top: 48px;
+      color: v.$black;
+      font-family: v.$font-principal;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 21px;
+      letter-spacing: 0px;
+    }
+    p {
+      padding-top: 38px;
+      width: 100%;
+      color: v.$black;
+      font-family: v.$font-secondary;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0px;
+    }
+    .ft__nav-lc {
+      ul {
+        @include m.reset-list();
+        display: flex;
+        gap: 20px;
+
+        li {
+          padding-top: 38px;
+          padding-bottom: 48px;
+        }
+      }
+    }
+  }
+}
