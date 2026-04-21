@@ -4,16 +4,43 @@
 footer {
   background-color: v.$black;
   margin-top: 120px;
+  @include m.breakpoint(desktop-xl){
+    padding-top: 80px;
+
+  }
 
   .ft__info {
     padding-left: 32px;
     padding-right: 32px;
+    @include m.breakpoint(tablet){
+      display: flex;
+      height: 216px;
+      justify-content: space-between;
+      
+    }
+    @include m.breakpoint(desktop-xl){
+    padding-left: 165px;
+
+
+    }
+
 
     h3 {
       padding-top: 48px;
       color: v.$white;
       font-family: v.$font-principal;
       font-size: v.$bodyM;
+      @include m.breakpoint(tablet){
+        padding-top: 58px;
+        width: 110px;
+
+      }
+      @include m.breakpoint(desktop-xl){
+        font-size: 40px;
+        width: 200px;
+
+
+      }
     }
     p {
       padding-top: 58px;
@@ -24,6 +51,20 @@ footer {
       font-weight: 400;
       line-height: 26px;
       letter-spacing: 0px;
+      @include m.breakpoint(tablet){
+        padding-top: 58px;
+        width:50%;
+        padding-left: 65px;
+
+      }
+      @include m.breakpoint(desktop-xl){
+        width: 40%;
+        font-size: 18px;
+        line-height: 28px;
+
+      }
+
+
     }
     .ft__nav {
       ul {
@@ -35,16 +76,35 @@ footer {
           padding-bottom: 48px;
         }
       }
+      @include m.breakpoint(tablet){
+        padding-top: 26px;
+      }
+      @include m.breakpoint(desktop-xl){
+        padding-right: 165px;
+
+      }
+
+
     }
   }
 }
 .ft-lc {
   margin-top: 0px;
   background-color: v.$brown;
+  @include m.breakpoint(desktop-xl){
+      padding: 80px 165px;
+      
 
+    }
   .ft__info-lc {
     padding-left: 32px;
     padding-right: 32px;
+    @include m.breakpoint(tablet){
+      display: flex; 
+      justify-content: space-between;
+        
+    }
+    
 
     h3 {
       padding-top: 48px;
@@ -54,6 +114,18 @@ footer {
       font-weight: 900;
       line-height: 21px;
       letter-spacing: 0px;
+      @include m.breakpoint(tablet){
+        padding-top: 56px;
+        padding-bottom: 120px; 
+      }
+      @include m.breakpoint(desktop-xl){
+        padding: 0;
+        font-size: 32px;
+        line-height: 30px;
+      
+      }
+
+
     }
     p {
       padding-top: 38px;
@@ -64,6 +136,16 @@ footer {
       font-weight: 400;
       line-height: 26px;
       letter-spacing: 0px;
+      @include m.breakpoint(tablet){
+        width: 40%;
+        padding-top: 56px;
+      }
+      @include m.breakpoint(desktop-xl){
+        padding: 0;
+        width: 37%;
+        
+      
+      }
     }
     .ft__nav-lc {
       ul {
@@ -74,6 +156,16 @@ footer {
         li {
           padding-top: 38px;
           padding-bottom: 48px;
+          @include m.breakpoint(tablet){
+            padding-top: 56px;
+          
+          }
+          @include m.breakpoint(desktop-xl){
+            padding: 0;
+            
+        
+      
+          }
         }
       }
     }

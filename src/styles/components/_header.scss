@@ -6,9 +6,52 @@
 .header-principal-lc{
     .container{
         padding-left: 0px;
+        @include m.breakpoint(tablet){
+            padding-left: 39px;
+            
+        }
     }
+    
+
+
+
     height: 550px ;
-    background-image: url("/public/Maps.svg");
+    background-image: url("/Maps.svg");
+    @include m.breakpoint(tablet){
+        background-image: url("/BitmapM.svg");
+        &::before{
+            content: "";
+            position: absolute;
+            top: 29%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("/Icono.svg");
+            width: 66px;
+            height: 88px;
+
+        }
+
+    }
+    @include m.breakpoint(desktop-xl){
+        background-image: url("/BitmapXl.svg");
+        &::before{
+            content: "";
+            position: absolute;
+            top: 29%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-image: url("/Icono.svg");
+            width: 66px;
+            height: 88px;
+
+        }
+
+    }
+
+
+
+
+
     background-size: 100%;
     background-repeat: no-repeat;
     .header__buttons-lc{
@@ -49,7 +92,9 @@
             
    
         }
-
+        @include m.breakpoint(desktop-xl){
+            margin-left: 156px;
+        }
     }
 
 

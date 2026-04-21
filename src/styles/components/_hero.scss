@@ -3,17 +3,72 @@
 
 
 .hero-principal{
+
+    @include m.breakpoint(desktop-xl){
+        background: linear-gradient(90deg, v.$black 0%, v.$black 50%, white 50%, white 100%);
+        position: relative;
+        
+    }
     .hero__media{
+
+
+        @include m.breakpoint(tablet){
+            display: none;
+        }
+        
+
         img{
             width: 100%;
             display: block;
+            @include m.breakpoint(desktop-xl) {
+            display: none; 
+        }
+
         }
         
+        .img-desktop-xl {
+            display: none;
+            
+
+
+            
+        }
+
+
+
+        
     }
-}
+    .container{
+    @include m.breakpoint(tablet){
+        background-image: url(/public/Rectangle2.svg);
+        background-repeat: no-repeat;
+        background-position: left;
+        height: 700px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @include m.breakpoint(desktop-xl){
+        background-image: url(/public/Rectangle2.svg);
+        background-position: center;
+        background-size: 540px;
+        
+        
+    }
 
 
-.container{
+
+
+    .hero__content{
+        @include m.breakpoint(tablet){
+            grid-column: 2;
+        }
+        
+
+    }
+
+
+
+
     .title__principal{
         font-family: v.$font-principal;
         font-size: v.$headM;
@@ -21,6 +76,22 @@
         line-height: 55px;
         width: 84%;
         padding-top:32px ;
+        @include m.breakpoint(tablet) { 
+            padding-top: 145px;
+            font-size: v.$headL;
+            line-height: 65px;
+            width: 90%;
+
+        }
+        @include m.breakpoint(desktop-xl){
+            position: relative;
+            color: v.$white;
+            font-size: v.$headXL;
+            right: 555px;
+            line-height: 88px;
+
+        }
+
     }
     .subtitle__principal{
         font-family: v.$font-secondary;
@@ -29,13 +100,39 @@
         font-weight: 300;
         line-height: 28px;
         width: 100%;
-        padding-top:32px
+        padding-top:32px;
+        @include m.breakpoint(tablet){
+            padding-top: 48px;
+            font-weight: 400;
+            width: 100%;
+            padding-right: 40px;
 
+        }
+        @include m.breakpoint(desktop-xl){
+            position: relative;
+            bottom: 245px;
+            left: 204px;
+            width: 57%;
+            font-size: v.$bodyM;
+            line-height: 32px;
+
+
+        }
+       
     }
     .hero__buttons{
         display: flex;
         flex-direction: row;
         margin-top: 32px;
+        @include m.breakpoint(tablet){
+            margin-top: 48px;
+        }
+        @include m.breakpoint(desktop-xl){
+            position: relative;
+            bottom:210px;
+            left: 205px;
+        }
+
         
         .button{
             @include m.btn1;
@@ -72,50 +169,113 @@
     }
 }
 
+}
+
+
+
+
 .hero-addres{
     background-color: v.$black;
-
-    header{
-        padding-top:48px ;
-        h1{
-            color: v.$white;
-            font-family: v.$font-principal;
-            font-size: 50px;
-            font-weight: 900;
-            line-height: 45px;
-            letter-spacing: 0px;
+    .container{
+        
+        @include m.breakpoint(tablet){
+            display: flex;
+            
         }
-    }
-    h2{
-        padding-top:48px;
-        color: v.$brown;
-        font-family: v.$font-principal;
-        font-size: 32px;
-        font-weight: 900;
-        line-height: 32px;
-        letter-spacing: 0px;
+
+        header{
+            padding-top:48px ;
+            @include m.breakpoint(tablet){
+                padding-top: 88px;
+                padding-left: 39px;
+                
+            }
+            @include m.breakpoint(desktop-xl){
+                padding-top: 104px;
+                padding-left: 165px;
+
+                
+            }
+            h1{
+                color: v.$white;
+                font-family: v.$font-principal;
+                font-size: 50px;
+                font-weight: 900;
+                line-height: 45px;
+                letter-spacing: 0px;
+            }
+            @include m.breakpoint(desktop-xl){
+                font-size: 70px;
+                line-height: 70px;
+            }
+
+        
+        }
+
+        .hero__information{
+            @include m.breakpoint(tablet){
+                padding-left: 95px;
+                padding-right: 25px;
+            }
+            @include m.breakpoint(desktop-xl){
+                padding-top: 54px;
+                padding-left: 360px;
+                padding-right: 165px;
+                padding-bottom: 90px;
+            }
+
+
+            h2{
+            padding-top:48px;
+            color: v.$brown;
+            font-family: v.$font-principal;
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 32px;
+            letter-spacing: 0px;
+            @include m.breakpoint(desktop-xl){
+                font-size: 36px;
+                line-height: 36px;
+            }
+
+            }
+            p.addres{
+                padding-top: 20px;
+                color: v.$white;
+                font-family: v.$font-secondary;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: 0px;
+                @include m.breakpoint(desktop-xl){
+                    font-size: 22px;
+                    line-height: 32px;
+                    font-weight: 300;
+                }
+
+            }
+            p.information{
+                padding-top: 20px;
+                padding-bottom: 56px;
+                color: v.$white;
+                font-family: v.$font-secondary;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: 0px;
+                @include m.breakpoint(desktop-xl){
+                    font-size: 22px;
+                    line-height: 32px;
+                    font-weight: 300;
+                }
+            }
+
+
+        }
+        
+
 
     }
-    p.addres{
-        padding-top: 20px;
-        color: v.$white;
-        font-family: v.$font-secondary;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0px;
-
-    }
-    p.information{
-        padding-top: 20px;
-        padding-bottom: 56px;
-        color: v.$white;
-        font-family: v.$font-secondary;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0px;
-    }
-
+    
 }
 
